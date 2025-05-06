@@ -52,7 +52,6 @@ img {
 
 .header {
     margin: auto;
-    max-width: 320px;
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
 }
@@ -68,6 +67,7 @@ img {
 .header-div {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navigation {
@@ -108,14 +108,9 @@ img {
 }
 
 .header-menu-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    fill: #2F2F37;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0;
-    cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 
 .header-menu-button:hover {
@@ -133,12 +128,19 @@ img {
     background: #2e2f42;
     background-image:
             linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/people-office.jpg);
+            url(../images/Dark-bg.jpg);
     margin: 0 auto;
-    max-width: 320px;
+    max-width: 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+@media (min-resolution: 2x) {
+    .main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/Dark-bg@2x.jpg);
+    }
 }
 
 .main-title {
@@ -233,8 +235,6 @@ img {
 /*section-title*/
 
 .section-title {
-    margin: auto;
-    max-width: 320px;
     padding: 96px 0;
     background: #f4f4fd;
 }
@@ -408,8 +408,7 @@ img {
 /*footer*/
 
 .footer {
-    margin: auto;
-    max-width: 320px;
+    margin: auto;   
     background: #2e2f42;
     padding: 96px 0;
     color: #ffffff
@@ -781,7 +780,7 @@ img {
 
 @media screen and (min-width: 768px) {
     .container {
-        max-width: 768px;
+        max-width: 100%;
     }
         /*header*/
 
@@ -894,6 +893,10 @@ img {
 
             /*container-two*/
 
+.section-title {
+    max-width: 768px;
+}
+
     .objective {
         gap:24px;
         flex-wrap: wrap;
@@ -905,8 +908,57 @@ img {
 }
 
             /*section-title*/
+
+.section-img {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+    align-items: baseline;
+}
+
+.section-img .section-item {
+    width: calc((100% - 24px) / 2);
+}
+
             /*section-tree*/
+
+.section-tree {
+    max-width: 768px;
+}
+
+.portfolio-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.portfolio-list .card-item {
+    width: calc((100% - 24px) / 2);
+}
+
             /*footer*/
+
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-media {
+    align-items: flex-start;
+    padding-left: 24px;
+}
+
+.footer-subscribe {
+    align-items: flex-start;
+}
+
+.footer-form {
+    flex-direction: row;
+    gap: 24px;
+}
             /*form*/
 }
      
