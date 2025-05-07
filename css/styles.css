@@ -881,10 +881,21 @@ img {
     }
             
             /*main*/
+
+
   
     .main {        
         padding: 120px 0;
-        max-width: 768px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/office.jpg);
+    }
+
+    @media (min-resolution: 2x) {
+        .main {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/office@2x.jpg);
+        }
+        
     }
     
     .main-title {
@@ -893,14 +904,16 @@ img {
 
             /*container-two*/
 
-.section-title {
-    max-width: 768px;
-}
 
     .objective {
         gap:24px;
         flex-wrap: wrap;
         flex-direction: row;
+    }
+
+    .objective-title {
+        display: flex;
+        flex-wrap: wrap
     }
 
     .objective .objective-title {
@@ -914,6 +927,11 @@ img {
     flex-direction: row;
     gap: 24px;
     align-items: baseline;
+    justify-content: center;
+}
+
+.section-item {
+    max-width: 264px;
 }
 
 .section-img .section-item {
@@ -960,6 +978,13 @@ img {
     gap: 24px;
 }
             /*form*/
+
+    .form-modal {
+        max-width: 408px;
+        min-height: 584px;
+        padding: 72px 24px 16px 24px;
+    }
+    
 }
      
 
@@ -1022,7 +1047,6 @@ img {
     }
 
         /*address*/
-
     
 
     .objective-title {
